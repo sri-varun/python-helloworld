@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, request
+app = Flask(__name__)
 import traceback
 
 def create_app():
