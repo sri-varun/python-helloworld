@@ -1,9 +1,9 @@
 from flask import Flask, jsonify, request
-app = Flask(__name__)
 import traceback
 
 def create_app():
     app = Flask(__name__)
+    app.config['WTF_CSRF_ENABLED'] = False
     with app.app_context():
         highlow()
     return app
