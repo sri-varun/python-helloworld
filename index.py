@@ -18,7 +18,7 @@ def highlow():
  try:
     value1 = request.get_json().get('value')
     if isinstance(value1, int):
-        foo = jsonify(value="1",rating="high") if (value1 > 99) else jsonify(value="0",rating="low")
+        foo = jsonify(value="0",rating="high") if (value1 > 99) else jsonify(value="0",rating="low")
         return foo
     else:
         return "error"
